@@ -130,7 +130,8 @@ body {
     z-index: 99;
     background: white;
     border-radius: .25rem;
-    color: var(--light);
+    font-size: 1rem;
+    color: var(--grayish-blue);
     list-style: none;
     padding: 1.25rem;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
@@ -173,10 +174,11 @@ body {
     overflow: visible;
     background-image: url("/images/image-mockups.png"), url("/images/bg-intro-mobile.svg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain, cover;
     background-position: center;
     height: 420px;
     width: 100%;
+    margin-bottom: 2rem;
 }
 
 .hero_header {
@@ -197,6 +199,11 @@ body {
     padding: .75rem 2rem;
     border-radius: 30px;
     margin-bottom: 4rem;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
+    opacity: 0.8;
 }
 
 .hero_text, .why-us_text, .why-us-list_text {
@@ -310,6 +317,12 @@ body {
     margin-bottom: 2rem;
 }
 
+.social-list_icon {
+    fill: white;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
 .footer-list_item {
     font-size: 14px;
     color: var(--grayish-blue);
@@ -323,10 +336,46 @@ body {
 .footer-credit {
     font-size: 12px;
     color: var(--grayish-blue);
-    margin-bottom: 1rem;
+    padding-bottom: 1.25rem;
 }
 /* Footer end */
 
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+    .wrapper {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .sectionGap {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
+
+    .footer .wrapper {
+        padding-top: 1.2rem;
+    }
+
+    .footer-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .blog-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px
+        }
+    
+        
+        .blog-list_img {
+            height: 266px;
+        }
+}
 
 @media screen and (min-width: 1024px) {
 
@@ -367,11 +416,12 @@ body {
         z-index: 99;
         background: white;
         border-radius: .25rem;
-        color: var(--light);
+        
         list-style: none;
         padding: 0;
         box-shadow: none;
         margin: 0 auto;
+        
     }
     
    .logo_img {
@@ -385,10 +435,27 @@ body {
    .menu-list_item {
        padding: 0;
        z-index: 99;
+        position: relative;
    }
 
    .menu-list_item:not(:last-child) {
        margin-right: 1rem;
+   }
+
+
+    .menu-list_item:hover,
+    .menu-list_item:focus {
+        color: var(--dark-blue);
+    }
+
+   .menu-list_item:hover::after {
+        content: '';
+        bottom: -1.7rem;
+        height: 4px;
+        left: 0;
+        width: 100%;
+        background-color: var(--lime-green);
+        position: absolute;
    }
    .hamburger {
        display: none;
@@ -444,33 +511,11 @@ body {
     }   
     
     
-       .hero_text,
-       .why-us_text {
-           font-size: 18px;
-           line-height: 1.625;
-       }
-/*     
-    .cta-btn {  
-            font-size: 14px;  
-            font-weight: var(--bold); 
-            color: white;    
-            background: linear-gradient(90deg, rgba(49, 211, 92, 1) 0%, rgba(43, 183, 218, 1) 100%);    
-            padding: .75rem 2rem;   
-            border-radius: 30px;   
-            margin-bottom: 4rem;   
-    }   */
-/*     
-    
-    .hero_text, 
-    .why-us_text,    
-    .why-us-list_text { 
-            color: var(--grayish-blue);  
-            font-size: 14px;  
-            line-height: 1.625;   
-            padding: 0 .2rem;  
-            margin-top: 1rem; 
-    }     */
-
+    .hero_text,
+    .why-us_text {
+        font-size: 18px;
+        line-height: 1.625;
+    }
     /*why us */
 
     .why-us .wrapper {
@@ -556,6 +601,11 @@ body {
         margin-bottom: 0;
     }
 
+    .footer-list_item:hover,
+    .footer-list_item:focus {
+        color: white;
+    }
+
     .footer-logo_link {
         align-self: start;
         justify-self: center;
@@ -569,6 +619,11 @@ body {
         grid-area: d;
         margin-bottom: 0;
         align-self: center;
+    }
+    
+    .social-list_icon:hover,
+    .social-list_icon:focus {
+        fill: var(--lime-green)
     }
 
     .footer_button {
@@ -585,6 +640,7 @@ body {
         margin: 0;
         align-self: center;
         justify-self: end;
+        padding-bottom: 0;
     }
 
 }
