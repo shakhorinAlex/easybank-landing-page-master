@@ -375,6 +375,12 @@ body {
         .blog-list_img {
             height: 266px;
         }
+
+        .why-us_list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px
+        }
 }
 
 @media screen and (min-width: 1024px) {
