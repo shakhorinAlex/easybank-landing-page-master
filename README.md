@@ -1,4 +1,4 @@
-# Frontend Mentor - Easybank landing page solution
+# Easybank landing page solution
 
 This is a solution to the [Easybank landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN).
 
@@ -11,4 +11,4 @@ This is a solution to the [Easybank landing page challenge on Frontend Mentor](h
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://shakhorinalex.github.io/easybank-landing-page-master/](https://shakhorinalex.github.io/easybank-landing-page-master/)
