@@ -172,7 +172,7 @@ body {
 
 .hero_right-side {
     overflow: visible;
-    background-image: url("./images/image-mockups.png"), url("./images/bg-intro-mobile.svg");
+    background-image: url("../images/image-mockups.png"), url("../images/bg-intro-mobile.svg");
     background-repeat: no-repeat;
     background-size: contain, cover;
     background-position: center;
@@ -478,7 +478,7 @@ body {
         align-items: center;
         justify-content: center;
         height: 651px;
-        background-image: url('./images/bc-desktop.jpg');
+        background-image: url('../images/bc-desktop.jpg');
         background-size: cover;
         background-repeat: no-repeat;
     } 
@@ -490,7 +490,7 @@ body {
     
     
     .hero_right-side {   
-        background-image: url("./images/image-mockups.png");
+        background-image: url("../images/image-mockups.png");
         background-repeat: no-repeat;   
         background-size: contain;
         background-position: right;
